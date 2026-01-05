@@ -1,0 +1,45 @@
+{
+  "name": "global-docs",
+  "version": "1.0.0",
+  "description": "A library for validating and formatting country-specific documents in international applications.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"No tests speficied yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickpff/global-docs.git"
+  },
+  "keywords": [
+    "documents",
+    "validation",
+    "formatting",
+    "mask",
+    "international",
+    "country",
+    "locale",
+    "i18n",
+    "intl",
+    "localization",
+    "multicountry",
+    "forms",
+    "input",
+    "masking",
+    "validators",
+    "official-documents",
+    "locale"
+  ],
+  "author": "Patrick Ferreira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickpff/global-docs/issues"
+  },
+  "homepage": "https://github.com/patrickpff/global-docs#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
