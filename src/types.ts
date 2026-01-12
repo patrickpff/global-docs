@@ -8,9 +8,9 @@ export interface CountryModule {
     documents: Record<string, DocumentDefinition>;
 }
 
-export interface DocumentValidator {
+export interface DocumentValidator<TContext = undefined>{
     type: string;
     description: string;
-    validate(value: string): boolean;
-    mask?: (value: string) => string;
+    validate: (value: string, context?: TContext) => boolean;
+    mask?: (value: string, context?: TContext) => string;
 }
