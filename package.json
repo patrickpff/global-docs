@@ -1,6 +1,6 @@
 {
   "name": "global-docs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A library for validating and formatting country-specific documents in international applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
