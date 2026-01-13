@@ -1,13 +1,24 @@
 {
   "name": "global-docs",
   "version": "0.1.0",
-  "description": "A library for validating and formatting country-specific documents in international applications.",
+  "description": "Core engine for country-specific document validation and masking",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
     "test": "echo \"No tests speficied yet\" && exit 0"
   },
   "repository": {
@@ -30,8 +41,7 @@
     "input",
     "masking",
     "validators",
-    "official-documents",
-    "locale"
+    "official-documents"
   ],
   "author": "Patrick Ferreira",
   "license": "MIT",
