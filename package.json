@@ -2,29 +2,6 @@
   "name": "global-docs",
   "version": "0.1.2",
   "description": "Core engine for country-specific document validation and masking",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "prepublishOnly": "npm run build",
-    "test": "echo \"No tests speficied yet\" && exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/patrickpff/global-docs.git"
-  },
   "keywords": [
     "documents",
     "validation",
@@ -43,13 +20,42 @@
     "validators",
     "official-documents"
   ],
-  "author": "Patrick Ferreira",
-  "license": "MIT",
+  "homepage": "https://github.com/patrickpff/global-docs#readme",
   "bugs": {
     "url": "https://github.com/patrickpff/global-docs/issues"
   },
-  "homepage": "https://github.com/patrickpff/global-docs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickpff/global-docs.git"
+  },
+  "license": "MIT",
+  "author": "Patrick Ferreira",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "vitest": "^4.0.17"
+  },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.17",
     "typescript": "^5.9.3"
   }
 }
