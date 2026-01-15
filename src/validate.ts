@@ -1,6 +1,6 @@
 import { getCountry } from "./registry.js";
 
-export function validateDocument(
+export function validate(
   country: string,
   type: string,
   value: string
@@ -13,3 +13,16 @@ export function validateDocument(
 
   return validator.validate(value);
 }
+
+export function validatePath(
+  path: string,
+  value: string
+): boolean {
+  const [country, type] = path.split(".");
+  if (!country || !type) return false;
+  
+  return validate(country, type, value);
+}
+
+/** @deprecated use validate instead */
+export const validateDocument = validate;
